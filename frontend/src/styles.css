@@ -160,6 +160,17 @@ h2 {
   transform: translateY(-50%);
 }
 
+.connection-badge.demo-badge {
+  color: #fde68a;
+  background: rgba(245, 158, 11, 0.1);
+  border-color: rgba(251, 191, 36, 0.3);
+}
+
+.connection-badge.demo-badge::before {
+  background: var(--amber);
+  box-shadow: 0 0 12px rgba(251, 191, 36, 0.7);
+}
+
 .message {
   margin-bottom: 20px;
   padding: 15px 17px;
@@ -171,6 +182,28 @@ h2 {
   color: #cbd5e1;
   background: var(--surface);
   border: 1px solid var(--border);
+}
+
+.demo-message {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  color: #fde68a;
+  background: rgba(120, 53, 15, 0.2);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+}
+
+.demo-message button {
+  padding: 7px 11px;
+  color: #fef3c7;
+  background: transparent;
+  border: 1px solid rgba(253, 230, 138, 0.45);
+  border-radius: 7px;
+}
+
+.demo-message button:hover {
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .error-message {
@@ -675,6 +708,7 @@ tbody tr:last-child td {
     justify-content: flex-end;
   }
 
+  .demo-message,
   .error-message {
     align-items: flex-start;
     flex-direction: column;

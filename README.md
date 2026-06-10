@@ -8,6 +8,17 @@ This project was built as a portfolio project for an AI-powered full-stack
 internship. The goal is to demonstrate a complete and understandable data flow,
 not to present an enterprise-level system.
 
+## Live Demo
+
+[Open the frontend demo on GitHub Pages](https://stefanjorjevic.github.io/Sports-Performance-Tracker/)
+
+GitHub Pages hosts only static frontend files, so it cannot run the Node.js and
+Express backend. When the backend API is not available, the live demo shows
+sample player data and a clear demo mode message.
+
+To use the full application with real create, update, and delete requests, run
+both the frontend and backend locally by following the setup instructions below.
+
 ## Features
 
 - View total active players, average attendance, and average fitness score.
@@ -82,6 +93,8 @@ sport-performance-tracker/
 |-- frontend/
 |   |-- src/
 |   |   |-- components/
+|   |   |-- data/
+|   |   |   `-- demoData.js
 |   |   |-- services/
 |   |   |   `-- playerApi.js
 |   |   |-- App.jsx
@@ -176,6 +189,39 @@ VITE_API_URL=http://localhost:3001/api
 
 Restart the Vite server after changing an environment variable.
 
+## GitHub Pages Deployment
+
+The Vite production build is configured to create static files in the root
+`docs/` folder. The repository name is included in the Vite `base` setting so
+JavaScript and CSS files load from the correct GitHub Pages URL.
+
+Build and push the frontend:
+
+```bash
+cd frontend
+npm install
+npm run build
+cd ..
+git add .
+git commit -m "Deploy frontend to GitHub Pages"
+git push
+```
+
+After pushing:
+
+1. Open the GitHub repository.
+2. Go to **Settings**, then **Pages**.
+3. Under **Build and deployment**, select **Deploy from a branch**.
+4. Select the `main` branch and the `/docs` folder.
+5. Save the settings and wait for GitHub Pages to publish the site.
+
+The local development command is unchanged:
+
+```bash
+cd frontend
+npm run dev
+```
+
 ## API Endpoints
 
 | Method | Endpoint | Purpose |
@@ -220,6 +266,9 @@ Build the frontend from the `frontend` folder:
 npm run build
 ```
 
+The production build is written to the root `docs/` folder for GitHub Pages.
+The live demo uses sample data when the local API is not available.
+
 ## Responsible AI Assistance
 
 OpenAI Codex was used as a development assistant during this project. It helped
@@ -253,7 +302,7 @@ assistant's output was written or understood automatically.
 - There is no authentication or authorization.
 - Insights are fixed rules, not machine learning predictions.
 - There are no automated frontend component tests yet.
-- The project has not yet been configured for production deployment.
+- GitHub Pages hosts only the frontend; the backend is not deployed.
 
 ## Possible Future Improvements
 

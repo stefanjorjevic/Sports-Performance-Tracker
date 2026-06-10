@@ -3,6 +3,7 @@ import DashboardMetrics from "./components/DashboardMetrics.jsx";
 import InsightsPanel from "./components/InsightsPanel.jsx";
 import PlayerForm from "./components/PlayerForm.jsx";
 import PlayerRoster from "./components/PlayerRoster.jsx";
+import { demoInsights, demoPlayers } from "./data/demoData.js";
 import {
   createPlayer,
   deletePlayer,
@@ -20,6 +21,7 @@ function App() {
   const [isSaving, setIsSaving] = useState(false);
   const [deletingPlayerId, setDeletingPlayerId] = useState(null);
   const [errorMessage, setErrorMessage] = useState("");
+  const [isDemoMode, setIsDemoMode] = useState(false);
 
   const loadDashboardData = useCallback(async () => {
     setIsLoading(true);
@@ -33,8 +35,11 @@ function App() {
 
       setPlayers(loadedPlayers);
       setInsights(loadedInsights);
-    } catch (error) {
-      setErrorMessage(`Could not load dashboard data. ${error.message}`);
+      setIsDemoMode(false);
+    } catch {
+      setPlayers(demoPlayers);
+      setInsights(demoInsights);
+      setIsDemoMode(true);
     } finally {
       setIsLoading(false);
     }
@@ -70,6 +75,13 @@ function App() {
   }
 
   async function handleSavePlayer(playerData) {
+    if (isDemoMode) {
+      setErrorMessage(
+        "Changes are unavailable in demo mode. Start the local backend to add or edit players."
+      );
+      return false;
+    }
+
     setIsSaving(true);
     setErrorMessage("");
 
@@ -100,6 +112,13 @@ function App() {
   }
 
   async function handleDeletePlayer(player) {
+    if (isDemoMode) {
+      setErrorMessage(
+        "Changes are unavailable in demo mode. Start the local backend to delete players."
+      );
+      return;
+    }
+
     const shouldDelete = window.confirm(
       `Delete ${player.name} from the roster?`
     );
@@ -142,8 +161,19 @@ function App() {
             recommendations.
           </p>
         </div>
-        <span className="connection-badge">Express API</span>
+        <span className={`connection-badge ${isDemoMode ? "demo-badge" : ""}`}>
+          {isDemoMode ? "Demo data" : "Express API"}
+        </span>
       </header>
+
+      {isDemoMode && (
+        <div className="message demo-message" role="status">
+          <span>Demo mode: backend API is not connected.</span>
+          <button type="button" onClick={loadDashboardData}>
+            Retry API
+          </button>
+        </div>
+      )}
 
       {errorMessage && (
         <div className="message error-message" role="alert">
