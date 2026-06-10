@@ -1,0 +1,17 @@
+{
+  "name": "sports-performance-tracker-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Express API for the Sports Performance and Attendance Tracker",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test:api": "node scripts/manualApiTest.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}

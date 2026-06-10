@@ -1,0 +1,128 @@
+[
+  {
+    "id": "player-3",
+    "name": "Vladislav Petkovic Dis",
+    "age": 18,
+    "position": "Forward",
+    "attendancePercentage": 88,
+    "fitnessScore": 6.8,
+    "status": "Active"
+  },
+  {
+    "id": "player-4",
+    "name": "Stefan Markovic",
+    "age": 17,
+    "position": "Goalkeeper",
+    "attendancePercentage": 56,
+    "fitnessScore": 4.6,
+    "status": "Inactive"
+  },
+  {
+    "id": "033ca164-c6b7-4936-9d7c-8e526b9e3498",
+    "name": "Milenko Bubina",
+    "age": 17,
+    "position": "Midfielder",
+    "attendancePercentage": 69,
+    "fitnessScore": 8.8,
+    "status": "Active"
+  },
+  {
+    "id": "027b8c38-5438-4b07-bbd1-06c0f40c7e6a",
+    "name": "Milan Nikolic",
+    "age": 18,
+    "position": "Goalkeeper",
+    "attendancePercentage": 80,
+    "fitnessScore": 7,
+    "status": "Active"
+  },
+  {
+    "id": "dcc1cc2b-a2fa-40a6-9d47-401af2314c94",
+    "name": "Aleksa Santic",
+    "age": 18,
+    "position": "Defender",
+    "attendancePercentage": 78,
+    "fitnessScore": 7,
+    "status": "Active"
+  },
+  {
+    "id": "74aed8a9-d188-4f4a-8eaf-0c67723b5f88",
+    "name": "Dusan Radovic",
+    "age": 18,
+    "position": "Defender",
+    "attendancePercentage": 78,
+    "fitnessScore": 7,
+    "status": "Active"
+  },
+  {
+    "id": "cfd023ca-c347-4a5a-a61a-1855e2350859",
+    "name": "Laza Kostic",
+    "age": 17,
+    "position": "Defender",
+    "attendancePercentage": 78,
+    "fitnessScore": 7,
+    "status": "Active"
+  },
+  {
+    "id": "2b6e77a7-e89f-48f3-bc56-4859f0dae65e",
+    "name": "Milan Rakic",
+    "age": 18,
+    "position": "Defender",
+    "attendancePercentage": 78,
+    "fitnessScore": 7,
+    "status": "Active"
+  },
+  {
+    "id": "6bed5d1e-6e1b-4f78-b090-acfa13b779dc",
+    "name": "Oskar Davico",
+    "age": 17,
+    "position": "Defender",
+    "attendancePercentage": 78,
+    "fitnessScore": 7,
+    "status": "Active"
+  },
+  {
+    "id": "74842a6e-92b5-4c2f-a472-0e6ace31784c",
+    "name": "Milan Nikolic",
+    "age": 18,
+    "position": "Midfielder",
+    "attendancePercentage": 78,
+    "fitnessScore": 7,
+    "status": "Injured"
+  },
+  {
+    "id": "d8a657bf-3ba3-458b-8ffa-6e519634580f",
+    "name": "Desanka Maksimovic",
+    "age": 17,
+    "position": "Defender",
+    "attendancePercentage": 78,
+    "fitnessScore": 7,
+    "status": "Active"
+  },
+  {
+    "id": "8e7fbdf9-9123-4236-a63d-a4e7ef810fb0",
+    "name": "Stefan Djordjevic",
+    "age": 40,
+    "position": "Midfielder",
+    "attendancePercentage": 45,
+    "fitnessScore": 4,
+    "status": "Inactive"
+  },
+  {
+    "id": "4242e9f0-24b1-4650-a9d7-dbde87646523",
+    "name": "Alka Vujica",
+    "age": 60,
+    "position": "Midfielder",
+    "attendancePercentage": 89,
+    "fitnessScore": 9,
+    "status": "Active"
+  },
+  {
+    "id": "7c6e7039-9b24-49bd-8a03-374c87faab06",
+    "name": "Vladimir Nikolic",
+    "age": 38,
+    "position": "Midfielder",
+    "attendancePercentage": 78,
+    "fitnessScore": 7,
+    "status": "Active"
+  }
+]

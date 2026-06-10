@@ -1,0 +1,29 @@
+# Installed dependencies
+node_modules/
+
+# Frontend production output
+frontend/dist/
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# Keep the example environment file
+!frontend/.env.example
+
+# Test and coverage output
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor settings
+.vscode/
+.idea/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
